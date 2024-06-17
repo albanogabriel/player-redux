@@ -37,6 +37,10 @@ const playerSlice = createSlice({
     play: (state, action) => {
       state.currentModuleIndex = action.payload.moduleIndex
       state.currentLessonIndex = action.payload.lessonIndex
+
+      // ou pelo indíce, caso passae um play([moduleIndex, lessonIndex])
+      // state.currentModuleIndex = action.payload[0]
+      // state.currentLessonIndex = action.payload[1]
     }
   }
 })

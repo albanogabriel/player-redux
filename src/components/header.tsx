@@ -2,12 +2,12 @@ import { useAppSelector } from "../store"
 
 export function Header(){
   const { currentModule, currentLesson } = useAppSelector(store => {
-    const { currentModuleIndex, currentLessonIndex } = store.player
+    const { currentModuleIndex, currentLessonIndex, course } = store.player
 
-    const currentModule = store.player.course.modules[currentModuleIndex]
-    const currentLesson = store.player.course.modules[currentModuleIndex].lessons[currentLessonIndex]
+    const currentModule = course.modules[currentModuleIndex]
+    const currentLesson = course.modules[currentModuleIndex].lessons[currentLessonIndex]
 
-    return { currentModule, currentLesson}
+    return { currentModule, currentLesson }
   })
 
   return(
